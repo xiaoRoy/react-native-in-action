@@ -7,10 +7,31 @@ class WeatherProject extends Componet {
         this.state = {zip: ""}
     }
 
-   
+    render(){
+        return (
+            <View style={styles.container}>
+                <Text style={styles.welcome}>
+                    You input {this.state.zip}.
+                </Text>
+                <TextInput style={styles.input}>
+                </TextInput>
+            </View>
+        );
+    }
 }
  const styles = StyleSheet.create({
-     container : {
-         
-     }
- })
+     container: {
+        flex: 1,
+        justifyConent: "center",
+        alignItmes: "center",
+        backgroundColor: "#F5FCFF"
+     },
+     welcome: { fontSize: 20, textAlign: "center", margin: "10"},
+     input:{
+         fontSize: 20,
+         borderWidth: 2,
+         padding: 2,
+         height: 40,
+         width: 100,
+     } 
+ });
