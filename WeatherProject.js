@@ -7,14 +7,17 @@ class WeatherProject extends Componet {
         this.state = {zip: ""}
     }
 
+    _hanldeTextChange = event => {
+        this.setSatet({zip: event.nativeEvent.text});
+    }
+
     render(){
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>
                     You input {this.state.zip}.
                 </Text>
-                <TextInput style={styles.input}>
-                </TextInput>
+                <TextInput style={styles.input} onSubmitEditting={this._hanldeTextChange}>
             </View>
         );
     }
@@ -35,3 +38,4 @@ class WeatherProject extends Componet {
          width: 100,
      } 
  });
+ export default WeatherProject
